@@ -1,56 +1,46 @@
-title: "win64.li"
-tagline: "Research. Leaks. Write-ups."
-description: >-
-  Independent exploit development, security research, analysis, and techniques.
+# --- Site Metadata ---
+theme: jekyll-theme-chirpy
+lang: en
+timezone: Etc/UTC
+
+title: win64.li
+tagline: Research. Leaks. Write-ups.
+description: "Independent exploit development, security research, analysis, and techniques."
 
 url: "https://win64.li"
 baseurl: ""
 
-lang: "en"
-timezone: "Etc/UTC"
+github:
+  username: win64k
 
-theme: jekyll-theme-chirpy
-
-author:
-  name: "win64k"
-  avatar: "https://github.com/win64k.png"
-  email: ""
-  links:
-    - https://github.com/win64k
-    - https://x.com/dulls
+social:
+  github: win64k
+  twitter: dulls
+  email: ""   # optional, leave empty if not used
 
 theme_mode: dark
-
-paginate: 10
+avatar: https://github.com/win64k.png
 
 toc: true
+paginate: 10
 
 comments:
-  provider: ""
+  provider:   # e.g., disqus, utterances, giscus — leave blank to disable
 
 pwa:
   enabled: true
   cache:
     enabled: true
 
-markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
       line_numbers: true
 
-webmaster_verifications:
-  google: ""
-  bing: ""
-
-analytics:
-  cloudflare:
-    id: ""
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# Optional frontmatter flags:
+# sensitive: [true | false]
+# redacted: [true | false]
 
 exclude:
   - README.md
@@ -61,3 +51,19 @@ exclude:
   - vendor
   - docs
   - tools
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+webmaster_verifications:
+  google:
+  bing:
+
+analytics:
+  cloudflare:
+    id:
+
+twitter:
+  username: dulls
+  card: summary_large_image
