@@ -28,7 +28,7 @@ But… with great extensibility comes great opportunity for abuse.
 ```mermaid
 flowchart LR
     VM1["VM 1"]
-    VM2["VM 2"]
+    VM2["VM 2"] 
     VM3["VM 3"]
     VAIO["VAIO"]
     VIB["VIB Layer"]
@@ -43,6 +43,8 @@ flowchart LR
     VM3 --> VAIO
     VAIO --> VIB --> VMK1 --> VMK2 --> VMK3 --> ST
 
+    %% Make nodes larger
+    classDef default width:200px,height:100px
 ```
 
 This analysis explores how these same components... when not tightly controlled, can give attackers a shiny (gr00tz shinyhunters #RIP), low-level platform for deploying whatever makes you sweat cold. I'm talking I/O interception, manipulation, exfiltration... with ransomware as a case study to demonstrate just how serious the impact can be.
@@ -79,8 +81,9 @@ flowchart LR
     %% Flows
     LEGIT1 --> LEGIT2 --> LEGIT3 --> LEGIT4 --> LEGIT5 --> LEGIT6
     MAL1 --> MAL2 --> MAL3 --> MAL4 --> MAL5 --> MAL6
- 
 
+    %% Make nodes larger
+    classDef default width:150px,height:80px
 ```
 
 ```bash
@@ -112,7 +115,6 @@ Now that we understand the attack surface, let's explore how these frameworks ca
 The abuse of VIB and VAIO frameworks can be implemented through several attack vectors, with ransomware (*YAY!*)
 For example... a malicious actor would develop their ransomware to hook and intercept I/O to encrypt VMs in real-time at kernel-level. 
 ```mermaid
-
 flowchart LR
     VIB["Malicious VIB Package"]
     MOD["Kernel Module"]
@@ -133,6 +135,8 @@ flowchart LR
     %% Attack flow
     VM --> FILTER --> DAEMON --> ENCRYPT --> DISK
 
+    %% Make nodes larger
+    classDef default width:180px,height:100px
 ```
 ### Core Attack Components
 
@@ -327,12 +331,12 @@ However, as I said... it's a technique... not a vulnerability.
 
 ## References
 
-- https://knowledge.broadcom.com/external/article/408122/esxi-psod-when-uefi-secure-boot-is-enabl.html 
-- https://knowledge.broadcom.com/external/article/324525/modifying-the-rclocal-or-localsh-file-in.html
-- https://attack.mitre.org/techniques/T1505/006/#:~:text=,esxcli
-- https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-malware-persistence
-- https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-detection-hardening 
-- https://github.com/vmware/esx-boot
-- https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign
-- https://www.virtualhome.blog/2019/12/19/vsphere-api-for-i-o-filtering-vaio-overview/
-- 
+- [ESXi PSOD when UEFI Secure Boot is enabled](https://knowledge.broadcom.com/external/article/408122/esxi-psod-when-uefi-secure-boot-is-enabl.html)
+- [Modifying the rc.local or localsh file in ESXi](https://knowledge.broadcom.com/external/article/324525/modifying-the-rclocal-or-localsh-file-in.html)
+- [MITRE ATT&CK: Server Software Component - ESXCLI](https://attack.mitre.org/techniques/T1505/006/#:~:text=,esxcli)
+- [ESXi Hypervisors: Malware Persistence](https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-malware-persistence)
+- [ESXi Hypervisors: Detection and Hardening](https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-detection-hardening)
+- [VMware ESX Boot Repository](https://github.com/vmware/esx-boot)
+- [BrickStorm Espionage Campaign](https://cloud.google.com/blog/topics/threat-intelligence/brickstorm-espionage-campaign)
+- [vSphere API for I/O Filtering (VAIO) Overview](https://www.virtualhome.blog/2019/12/19/vsphere-api-for-i-o-filtering-vaio-overview/)
+
