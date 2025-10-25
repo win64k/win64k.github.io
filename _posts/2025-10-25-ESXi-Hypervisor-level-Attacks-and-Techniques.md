@@ -142,8 +142,8 @@ flowchart LR
 ### VIB and VAIO Attack Taxonomy
 
 ```mermaid
-flowchart LR
-    %% Nodes
+%%{init: {"flowchart": {"curve": "linear", "nodeSpacing": 80, "rankSpacing": 60}}}%%
+flowchart TD
     A["VIB Installation"]
     B["Kernel Module Loading"]
     C["VAIO Filter Registration"]
@@ -154,18 +154,11 @@ flowchart LR
     H["Modified I/O"]
     I["VMkernel Execution"]
 
-    %% Flow
     A --> B --> C --> D --> E --> F --> G --> H --> I
 
-    %% Larger text and spacing
     classDef largeText font-size:18px,font-weight:bold;
     class A,B,C,D,E,F,G,H,I largeText;
 
-    %% Add general spacing for readability
-    %% Adjust node spacing using Mermaid config
-    %% This line is *safe* and supported in Mermaid v10+
-    %% You can embed this in your Markdown processor if supported:
-    %% %%{init: {"flowchart": {"curve": "linear", "nodeSpacing": 100, "rankSpacing": 80}}}%%
 
 ```
 
