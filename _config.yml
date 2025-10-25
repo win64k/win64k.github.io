@@ -3,9 +3,8 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: Etc/UTC
 
-title: win64.li
-tagline: Research. Leaks. Write-ups.
-description: "Independent exploit development, security research, analysis, and techniques."
+title: win64k 
+tagline: Independent exploit development, security research, analysis, and techniques.. 
 
 url: "https://win64.li"
 baseurl: ""
@@ -16,7 +15,6 @@ github:
 social:
   github: win64k
   twitter: dulls
-  email: ""   # optional, leave empty if not used
 
 theme_mode: dark
 avatar: https://github.com/win64k.png
@@ -25,7 +23,7 @@ toc: true
 paginate: 10
 
 comments:
-  provider:   # e.g., disqus, utterances, giscus — leave blank to disable
+  provider:
 
 pwa:
   enabled: true
@@ -37,10 +35,6 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
-
-# Optional frontmatter flags:
-# sensitive: [true | false]
-# redacted: [true | false]
 
 exclude:
   - README.md
