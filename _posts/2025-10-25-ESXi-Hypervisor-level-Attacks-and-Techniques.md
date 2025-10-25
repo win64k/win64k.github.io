@@ -143,18 +143,36 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    A["VIB Installation"]
-    B["Kernel Module Loading"]
-    C["VAIO Filter Registration"]
-    D["I/O Stack Hook"]
-    E["User-Space Daemon"]
-    F["IPC Communication"]
-    G["Data Processing"]
-    H["Modified I/O"]
-    I["VMkernel Execution"]
+    %% Increase spacing for better visibility
+    %% Layout tweaks
+    %% - Node spacing: spreads out boxes
+    %% - Rank spacing: adds vertical padding
+    %% - Font size slightly increased with style
 
-    A --> B --> C --> D --> E --> F --> G --> H --> I
-    classDef default width:180px,height:100px
+    %% Define graph settings
+    graph LR
+        %% Increase default spacing between nodes
+        %% (Larger canvas)
+        linkStyle default stroke-width:2px;
+        %% Optional spacing config (supported in most Mermaid renderers)
+        classDef default font-size:18px,font-weight:bold;
+        %% Add some manual breaks for layout control
+        A["VIB Installation"]
+        B["Kernel Module Loading"]
+        C["VAIO Filter Registration"]
+        D["I/O Stack Hook"]
+        E["User-Space Daemon"]
+        F["IPC Communication"]
+        G["Data Processing"]
+        H["Modified I/O"]
+        I["VMkernel Execution"]
+
+        A --> B --> C --> D --> E --> F --> G --> H --> I
+
+        %% Spacing hints
+        %% These make the flowchart take up more horizontal space
+        linkStyle 0,1,2,3,4,5,6,7 stroke-width:2px;
+
 
 ```
 
