@@ -1,35 +1,122 @@
-# --- Site Metadata ---
+# --- Site Configuration ---
+
+# Import the theme
 theme: jekyll-theme-chirpy
+
+# Language & Timezone
 lang: en
 timezone: Etc/UTC
 
-title: win64k
-tagline: Independent exploit development, security research, analysis, and techniques.
-description: "Independent exploit development, security research, analysis, and techniques."
+# --- jekyll-seo-tag settings ---
+title: win64.li
+tagline: Research. Leaks. Write-ups.
+description: >-
+  Independent exploit development, security research, analysis, and techniques.
 
 url: "https://win64.li"
 baseurl: ""
 
-# --- Author ---
-author:
-  name: "rey"
-  avatar: "https://github.com/win64k.png"
-  bio: "Exploit developer & researcher"
-  email: ""  # optional
-
-# --- Social Links ---
 github:
   username: win64k
 
-social:
-  github: win64k
-  twitter: dulls
+twitter:
+  username: dulls
 
-theme_mode: dark
+social:
+  name: rey
+  email:
+  links:
+    - https://x.com/dulls
+    - https://github.com/win64k
+
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+# --- Analytics ---
+analytics:
+  google:
+    id:
+  cloudflare:
+    id:
+  goatcounter:
+    id:
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  fathom:
+    id:
+
+# Pageviews (optional)
+pageviews:
+  provider:
+
+# --- Theme Options ---
+theme_mode: dark  # [light | dark] or leave blank to follow system preference
+cdn:
+avatar: "https://github.com/win64k.png"
+social_preview_image:
 toc: true
+
+comments:
+  provider: # [disqus | utterances | giscus]
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+# --- Static Assets ---
+assets:
+  self_host:
+    enabled:
+    env:
+
+# --- Progressive Web App (PWA) ---
+pwa:
+  enabled: false
+  cache:
+    enabled: false
+    deny_paths:
+
+# --- Pagination ---
 paginate: 10
 
-# --- Post Defaults ---
+# --- Markdown / Syntax Highlighting ---
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# --- Collections & Defaults ---
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
 defaults:
   - scope:
       path: ""
@@ -37,79 +124,51 @@ defaults:
     values:
       layout: post
       author: rey
+      comments: true
       toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
       comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
 
-# --- Collections ---
-collections:
-  posts:
-    output: true
-    permalink: /posts/:slug/
+# --- SASS & HTML Compression ---
+sass:
+  style: compressed
 
-# --- Tags & Categories Pages ---
-tag_page:
-  layout: tag
-  permalink: /tags/:name/
-
-category_page:
-  layout: category
-  permalink: /categories/:name/
-
-# --- Comments & Analytics ---
-comments:
-  provider:
-
-analytics:
-  cloudflare:
-    id:
-
-# --- Markdown Rendering ---
-kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
-
-# --- Plugins ---
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-archives
-
-# --- Archive Config ---
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive
-    tag: archive
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
-
-# --- PWA (disabled while editing) ---
-pwa:
-  enabled: false
-  cache:
-    enabled: false
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
 
 # --- Exclusions ---
 exclude:
-  - README.md
-  - LICENSE
-  - "*.config.js"
-  - "package*.json"
-  - node_modules
-  - vendor
+  - "*.gem"
+  - "*.gemspec"
   - docs
   - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
 
-# --- SEO / Webmaster / Twitter ---
-webmaster_verifications:
-  google:
-  bing:
-
-twitter:
-  username: dulls
-  card: summary_large_image
+# --- Archives for Categories & Tags ---
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
