@@ -23,7 +23,7 @@ social:
     - https://x.com/dulls  # pseudonym drop
 
 theme_mode: dark
-avatar: /assets/img/avatar.png
+avatar: https://github.com/win64k.png
 
 toc: true
 paginate: 10
