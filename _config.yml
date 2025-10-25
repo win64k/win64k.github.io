@@ -12,7 +12,7 @@ baseurl: ""
 
 # --- Author ---
 author:
-  name: "Rey"
+  name: "rey"
   avatar: "https://github.com/win64k.png"
   bio: "Exploit developer & researcher"
   email: ""  # optional
@@ -74,6 +74,8 @@ kramdown:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-archives
 
 # --- Archive Config ---
 jekyll-archives:
@@ -87,11 +89,13 @@ jekyll-archives:
     category: /categories/:name/
     tag: /tags/:name/
 
+# --- PWA (disabled while editing) ---
 pwa:
   enabled: false
   cache:
     enabled: false
 
+# --- Exclusions ---
 exclude:
   - README.md
   - LICENSE
@@ -102,6 +106,7 @@ exclude:
   - docs
   - tools
 
+# --- SEO / Webmaster / Twitter ---
 webmaster_verifications:
   google:
   bing:
