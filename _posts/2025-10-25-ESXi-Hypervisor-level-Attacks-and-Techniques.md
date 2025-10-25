@@ -143,35 +143,44 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-    %% Increase spacing for better visibility
-    %% Layout tweaks
-    %% - Node spacing: spreads out boxes
-    %% - Rank spacing: adds vertical padding
-    %% - Font size slightly increased with style
+    %% Nodes
+    A["VIB Installation"]
+    B["Kernel Module Loading"]
+    C["VAIO Filter Registration"]
+    D["I/O Stack Hook"]
+    E["User-Space Daemon"]
+    F["IPC Communication"]
+    G["Data Processing"]
+    H["Modified I/O"]
+    I["VMkernel Execution"]
 
-    %% Define graph settings
-    graph LR
-        %% Increase default spacing between nodes
-        %% (Larger canvas)
-        linkStyle default stroke-width:2px;
-        %% Optional spacing config (supported in most Mermaid renderers)
-        classDef default font-size:18px,font-weight:bold;
-        %% Add some manual breaks for layout control
-        A["VIB Installation"]
-        B["Kernel Module Loading"]
-        C["VAIO Filter Registration"]
-        D["I/O Stack Hook"]
-        E["User-Space Daemon"]
-        F["IPC Communication"]
-        G["Data Processing"]
-        H["Modified I/O"]
-        I["VMkernel Execution"]
+    %% Flow
+    A --> B --> C --> D --> E --> F --> G --> H --> I
 
-        A --> B --> C --> D --> E --> F --> G --> H --> I
+    %% Layout and spacing adjustments
+    %% These increase overall chart size and spacing
+    linkStyle default stroke-width:2px;
+    %% Global graph attributes for layout control
+    %% (available in Mermaid v10+)
+    %% Increase horizontal spacing
+    %% And enlarge text using graph-level settings
+    %% Note: styling must be set via `style` per-node or classDef
 
-        %% Spacing hints
-        %% These make the flowchart take up more horizontal space
-        linkStyle 0,1,2,3,4,5,6,7 stroke-width:2px;
+    %% Define a text styling class
+    classDef largeText font-size:18px,font-weight:bold;
+
+    %% Apply to all nodes
+    class A,B,C,D,E,F,G,H,I largeText;
+
+    %% Add extra padding by invisible links (for more spacing)
+    A ---| |--- B
+    B ---| |--- C
+    C ---| |--- D
+    D ---| |--- E
+    E ---| |--- F
+    F ---| |--- G
+    G ---| |--- H
+    H ---| |--- I
 
 
 ```
