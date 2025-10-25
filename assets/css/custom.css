@@ -1,0 +1,9 @@
+pre[class*="language-"]::before {
+  content: attr(data-lang);
+  display: block;
+  background: #333;
+  color: #bbb;
+  font-family: monospace;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
