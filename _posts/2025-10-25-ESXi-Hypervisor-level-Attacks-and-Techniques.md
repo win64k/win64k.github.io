@@ -43,8 +43,6 @@ flowchart LR
     VM3 --> VAIO
     VAIO --> VIB --> VMK1 --> VMK2 --> VMK3 --> ST
 
-    %% Make nodes larger
-    classDef default width:200px,height:100px
 ```
 
 This analysis explores how these same components... when not tightly controlled, can give attackers a shiny (gr00tz shinyhunters #RIP), low-level platform for deploying whatever makes you sweat cold. I'm talking I/O interception, manipulation, exfiltration... with ransomware as a case study to demonstrate just how serious the impact can be.
@@ -82,8 +80,6 @@ flowchart LR
     LEGIT1 --> LEGIT2 --> LEGIT3 --> LEGIT4 --> LEGIT5 --> LEGIT6
     MAL1 --> MAL2 --> MAL3 --> MAL4 --> MAL5 --> MAL6
 
-    %% Make nodes larger
-    classDef default width:150px,height:80px
 ```
 
 ```bash
@@ -135,8 +131,6 @@ flowchart LR
     %% Attack flow
     VM --> FILTER --> DAEMON --> ENCRYPT --> DISK
 
-    %% Make nodes larger
-    classDef default width:180px,height:100px
 ```
 ### Core Attack Components
 
@@ -160,6 +154,7 @@ flowchart LR
     I["VMkernel Execution"]
 
     A --> B --> C --> D --> E --> F --> G --> H --> I
+    classDef default width:180px,height:100px
 
 ```
 
