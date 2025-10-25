@@ -1,50 +1,56 @@
-# --- Site Metadata ---
-theme: jekyll-theme-chirpy
-lang: en
-timezone: Etc/UTC
-
-title: win64.li
-tagline: Research. Leaks. Write-ups.
+title: "win64.li"
+tagline: "Research. Leaks. Write-ups."
 description: >-
-  Independent exploit development, security research / analysis / techniques
-  . .
+  Independent exploit development, security research, analysis, and techniques.
 
 url: "https://win64.li"
 baseurl: ""
 
-github:
-  username: win64k
+lang: "en"
+timezone: "Etc/UTC"
 
-social:
-  name: 
-  email: 
+theme: jekyll-theme-chirpy
+
+author:
+  name: "win64k"
+  avatar: "https://github.com/win64k.png"
+  email: ""
   links:
     - https://github.com/win64k
-    - https://x.com/dulls  # pseudonym drop
+    - https://x.com/dulls
 
 theme_mode: dark
-avatar: https://github.com/win64k.png
 
-toc: true
 paginate: 10
 
+toc: true
+
 comments:
-  provider:
+  provider: ""
 
 pwa:
   enabled: true
   cache:
     enabled: true
 
+markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
       line_numbers: true
 
-# In each post frontmatter:
-# sensitive: [true | false]
-# redacted: [true | false]
+webmaster_verifications:
+  google: ""
+  bing: ""
+
+analytics:
+  cloudflare:
+    id: ""
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - README.md
@@ -55,15 +61,3 @@ exclude:
   - vendor
   - docs
   - tools
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-webmaster_verifications:
-  google:
-  bing:
-
-analytics:
-  cloudflare:
-    id:
