@@ -1,3 +1,28 @@
-<footer class="footer text-center">
-  <p>© 1967 by win64.li</p>
+<footer class="footer text-center" style="margin-top:2rem;">
+  <p class="footer-type">win64.li — don't act like OSINT gods, it's rey_</p>
+
+  <style>
+    .footer-type {
+      font-family: monospace;
+      color: var(--text-color); 
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid var(--text-color);
+      width: 0;
+      margin: 0 auto;
+      display: inline-block;
+      animation:
+        typing 4s steps(50, end) forwards,
+        blink .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 41ch; } 
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
 </footer>
