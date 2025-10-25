@@ -157,31 +157,15 @@ flowchart LR
     %% Flow
     A --> B --> C --> D --> E --> F --> G --> H --> I
 
-    %% Layout and spacing adjustments
-    %% These increase overall chart size and spacing
-    linkStyle default stroke-width:2px;
-    %% Global graph attributes for layout control
-    %% (available in Mermaid v10+)
-    %% Increase horizontal spacing
-    %% And enlarge text using graph-level settings
-    %% Note: styling must be set via `style` per-node or classDef
-
-    %% Define a text styling class
+    %% Larger text and spacing
     classDef largeText font-size:18px,font-weight:bold;
-
-    %% Apply to all nodes
     class A,B,C,D,E,F,G,H,I largeText;
 
-    %% Add extra padding by invisible links (for more spacing)
-    A ---| |--- B
-    B ---| |--- C
-    C ---| |--- D
-    D ---| |--- E
-    E ---| |--- F
-    F ---| |--- G
-    G ---| |--- H
-    H ---| |--- I
-
+    %% Add general spacing for readability
+    %% Adjust node spacing using Mermaid config
+    %% This line is *safe* and supported in Mermaid v10+
+    %% You can embed this in your Markdown processor if supported:
+    %% %%{init: {"flowchart": {"curve": "linear", "nodeSpacing": 100, "rankSpacing": 80}}}%%
 
 ```
 
