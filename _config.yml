@@ -3,12 +3,21 @@ theme: jekyll-theme-chirpy
 lang: en
 timezone: Etc/UTC
 
-title: win64k 
-tagline: Independent exploit development, security research, analysis, and techniques.. 
+title: win64k
+tagline: Independent exploit development, security research, analysis, and techniques.
+description: "Independent exploit development, security research, analysis, and techniques."
 
 url: "https://win64.li"
 baseurl: ""
 
+# --- Author ---
+author:
+  name: "Rey"
+  avatar: "https://github.com/win64k.png"
+  bio: "Exploit developer & researcher"
+  email: ""  # optional
+
+# --- Social Links ---
 github:
   username: win64k
 
@@ -17,24 +26,71 @@ social:
   twitter: dulls
 
 theme_mode: dark
-avatar: https://github.com/win64k.png
-
 toc: true
 paginate: 10
 
+# --- Post Defaults ---
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: rey
+      toc: true
+      comments: false
+
+# --- Collections ---
+collections:
+  posts:
+    output: true
+    permalink: /posts/:slug/
+
+# --- Tags & Categories Pages ---
+tag_page:
+  layout: tag
+  permalink: /tags/:name/
+
+category_page:
+  layout: category
+  permalink: /categories/:name/
+
+# --- Comments & Analytics ---
 comments:
   provider:
 
-pwa:
-  enabled: false
-  cache:
-    enabled: false
+analytics:
+  cloudflare:
+    id:
 
+# --- Markdown Rendering ---
 kramdown:
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     block:
       line_numbers: true
+
+# --- Plugins ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# --- Archive Config ---
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive
+    tag: archive
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+pwa:
+  enabled: false
+  cache:
+    enabled: false
 
 exclude:
   - README.md
@@ -46,17 +102,9 @@ exclude:
   - docs
   - tools
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
 webmaster_verifications:
   google:
   bing:
-
-analytics:
-  cloudflare:
-    id:
 
 twitter:
   username: dulls
