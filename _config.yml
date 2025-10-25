@@ -59,7 +59,6 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
 
 webmaster_verifications:
   google:
