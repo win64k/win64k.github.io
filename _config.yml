@@ -9,10 +9,9 @@ timezone: Etc/UTC
 
 # --- jekyll-seo-tag settings ---
 title: win64.li
-tagline: Research. Leaks. Write-ups.
-description: >-
+tagline: >-
   Independent exploit development, security research, analysis, and techniques.
-
+description: Research. Techniques. Write-ups.
 url: "https://win64.li"
 baseurl: ""
 
